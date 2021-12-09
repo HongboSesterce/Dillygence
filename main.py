@@ -1,4 +1,4 @@
-#%%
+#%% draw graph
 from PJdilly.readfile import reader
 from PJdilly.graph import plot2D
 

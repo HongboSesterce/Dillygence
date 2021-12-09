@@ -22,7 +22,7 @@ def MTTF(FILE,module):
     circle=duration.mean()
     pd_file_event=reader.rd_sql(FILE,f"SELECT * FROM 'DF109BFD_Events' where module='{module}'")
     num_event=len(pd_file_event)
-    return (circle*num_product)/num_event
+    return (circle*num_product)/(num_event-1)
     
 def circle(FILE,type,module):
     if type=='buffer':

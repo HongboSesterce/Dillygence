@@ -21,7 +21,7 @@ calc_time.circle(DB_FILE,'buffer','AP4_PLTFTAC0432_F')
 # %%
 # This function take the mean duration of all events for selected module.
 calc_time.MTTR(DB_FILE,'AP1_PLI1ILOT1')
-#%
+#%%
 # This function calculte the MTTF by  (temps de cycle * nombre de pièces produites) / (nombre d'événements bloquants - 1)
 # time of circle is using the function above, number of product is the length of the timestamps-1
 calc_time.MTTF(DB_FILE,'AP1_PLI1ILOT1')
@@ -36,4 +36,7 @@ calc_time.MTTF(DB_FILE,'AP1_PLI1ILOT1')
 calc_time.Anomaly(DB_FILE,'AP1_PLI1ILOT1',weight=5)
 
 
+# %%
+# consider all the module during this duration
+calc_time.Anomaly2(DB_FILE,'AP1_PLI1ILOT1',weight=2)
 # %%
